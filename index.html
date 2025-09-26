@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soburr | Software Programmer</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Abdulsobur Abdullah - Passionate Software Programmer specializing in responsive web applications, UI/UX design, and modern web technologies.">
+  <meta name="keywords" content="software programmer, web developer, frontend engineer, JavaScript, React, Node.js, portfolio">
+  <meta name="author" content="Abdulsobur Abdullah">
+  
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" as="script">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/chart.js" as="script">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js" as="script">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- External Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js" defer></script>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loader-container">
+      <div class="logo-text">soburr.dev</div>
+      <div class="loader">
+        <div class="loader-bar"></div>
+      </div>
+      <div class="loading-text">Initializing Soburr's Interface😁😉...</div>
+    </div>
+  </div>
+  
+  <!-- Particles.js Container -->
+  <div id="particles-js"></div>
+  
+  <!-- ======= Header ======= -->
+  <header class="glass">
+    <nav>
+      <div class="logo">Soburr</div>
+      <ul>
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button id="theme-toggle">🌙</button>
+        <button id="menu-toggle">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="parallax-container">
+    <div class="hero-content">
+      <h1>Hi, I'm <span>Abdulsobur Abdullah</span></h1>
+      <p>A passionate <span class="typing"></span></p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </section>
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="glass parallax-container">
+    <h2 class="parallax-element parallax-shallow">About Me</h2>
+    <p class="parallax-element parallax-medium">I am a software programmer specializing in responsive and scalable web applications. With expertise in modern web technologies, I create engaging user experiences that combine functionality with beautiful design.</p>
+  </section>
+
+  <!-- ======= Skills Section ======= -->
+  <section id="skills" class="glass parallax-container">
+    <h2 class="parallax-element parallax-shallow">Skills</h2>
+    <div class="skills-container">
+      <div class="chart-container parallax-element parallax-medium">
+        <canvas id="skillsChart"></canvas>
+      </div>
+      <div class="skills-grid parallax-element parallax-shallow">
+        <div class="skill" data-skill="HTML" data-level="90">
+          <span>HTML</span>
+          <div class="skill-level">90%</div>
+        </div>
+        <div class="skill" data-skill="CSS" data-level="85">
+          <span>CSS</span>
+          <div class="skill-level">85%</div>
+        </div>
+        <div class="skill" data-skill="JavaScript" data-level="80">
+          <span>JavaScript</span>
+          <div class="skill-level">80%</div>
+        </div>
+        <div class="skill" data-skill="React" data-level="75">
+          <span>React</span>
+          <div class="skill-level">75%</div>
+        </div>
+        <div class="skill" data-skill="Node.js" data-level="70">
+          <span>Node.js</span>
+          <div class="skill-level">70%</div>
+        </div>
+        <div class="skill" data-skill="Python" data-level="65">
+          <span>Python</span>
+          <div class="skill-level">65%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Projects Section ======= -->
+  <section id="projects" class="glass parallax-container">
+    <h2 class="parallax-element parallax-shallow">Projects</h2>
+    <div class="projects-container">
+      <!-- 3D Model Viewer -->
+      <div id="model-viewer-container" class="parallax-element parallax-medium">
+        <div id="model-viewer"></div>
+        <div class="model-controls">
+          <button id="rotate-left">⟲</button>
+          <button id="rotate-right">⟳</button>
+          <button id="zoom-in">+</button>
+          <button id="zoom-out">-</button>
+        </div>
+        <div id="model-fallback" class="model-fallback" style="display: none;">
+          <p>3D viewer not supported on this device. Viewing project images instead.</p>
+        </div>
+      </div>
+      
+      <div class="projects-grid parallax-element parallax-shallow">
+        <div class="project-card glass" data-title="Portfolio Website" data-desc="A digital portfolio highlighting code, design, innovation and development process." data-model="cube">
+          <div class="project-image">
+            <img src="Capture1.jpg" alt="Portfolio Website" loading="lazy">
+            <span class="view-3d-badge">View in 3D</span>
+          </div>
+          <h3>Portfolio Website</h3>
+          <p>A digital portfolio highlighting code, design, innovation and development process.</p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+        
+        <div class="project-card glass" data-title="Shales Constructions" data-desc="A web application for shales construction projects, allowing clients to view project details, schedule consultations, and track progress." data-model="sphere">
+          <div class="project-image">
+            <img src="Capture2.jpg" alt="Shales Constructions" loading="lazy">
+            <span class="view-3d-badge">View in 3D</span>
+          </div>
+          <h3>Shales Constructions</h3>
+          <p>A web application for shales construction projects, allowing clients to view project details, schedule consultations, and track progress.</p>
+          <p><a href="https://abdulsobur1.github.io/ShalesConstructions/" target="_blank">GO TO</a></p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>React</span>
+            <span>JavaScript</span>
+            <span>CSS</span>
+          </div>
+        </div>
+        
+        <div class="project-card glass" data-title="byteBANK" data-desc="A web application for byteBANK, a financial institution, that allows users to manage their accounts, perform transactions, and view account statements." data-model="torus">
+          <div class="project-image">
+            <img src="Capture3.jpg" alt="byteBANK" loading="lazy">
+            <span class="view-3d-badge">View in 3D</span>
+          </div>
+          <h3>byteBANK</h3>
+          <p>A web application for byteBANK, a financial institution, that allows users to manage their accounts, perform transactions, and view account statements.</p>
+          <p><a href="https://abdulsobur1.github.io/byteBANK/index.html" target="_blank">GO TO</a></p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Supabase</span>
+          </div>
+        </div>
+        
+        <div class="project-card glass" data-title="TechHavenn" data-desc="An E-commerce website for TechHavenn which allows customers to select and buy items." data-model="cube">
+          <div class="project-image">
+            <img src="Capture4.jpg" alt="TechHavenn" loading="lazy">
+            <span class="view-3d-badge">View in 3D</span>
+          </div>
+          <h3>TechHavenn</h3>
+          <p>An E-commerce website for TechHavenn which allows customers to select and buy items.</p>
+          <p><a href="https://abdulsobur1.github.io/TechHaven/" target="_blank">GO TO</a></p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>API</span>
+            <span>JavaScript</span>
+            <span>Supabase</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close">&times;</span>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="glass">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required/>
+      <input type="email" id="email" placeholder="Your Email" required/>
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <p>&copy; 2025 Abdulsobur Abdullah. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top">↑</button>
+
+  <!-- Success/Error Messages -->
+  <div id="notification" class="notification"></div>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
